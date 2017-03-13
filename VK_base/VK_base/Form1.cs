@@ -13,6 +13,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
+        string access_token;
+        string user_id;
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +25,7 @@ namespace WindowsFormsApplication1
             string url = e.Url.ToString();
             if (url.Contains("access_token"))
             {
-                string access_token;
-                string user_id;
+                
                 int index = url.IndexOf("access_token=");
                 int index2 = url.IndexOf("&expires_in");
                 access_token = url.Substring(index + 13, index2 - index - 13);
@@ -82,9 +83,12 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
+
         private void AutoLike_button_Click(object sender, EventArgs e)
         {
             AutoLike_form frm = new AutoLike_form();
+            frm.access_token = access_token;
+            frm.user_id = user_id;
             frm.ShowDialog();
         }
 

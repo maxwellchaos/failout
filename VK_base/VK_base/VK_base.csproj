@@ -84,6 +84,9 @@
     <Compile Include="SpamForm.Designer.cs">
       <DependentUpon>SpamForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AutoLike_form.resx">
+      <DependentUpon>AutoLike_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AvtoLaikGroup.resx">
       <DependentUpon>AvtoLaikGroup.cs</DependentUpon>
     </EmbeddedResource>
