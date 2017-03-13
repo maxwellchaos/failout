@@ -11,9 +11,16 @@ namespace WindowsFormsApplication1
 {
     public partial class SpamForm : Form
     {
+        public string access_token;
+        public string usre_id;
         public SpamForm()
         {
             InitializeComponent();
+        }
+
+        private void SpamForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

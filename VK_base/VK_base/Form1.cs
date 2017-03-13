@@ -11,8 +11,11 @@ using System.Xml;
 
 namespace WindowsFormsApplication1
 {
+   
     public partial class Form1 : Form
     {
+        public string access_token;
+           public     string user_id;
         public Form1()
         {
             InitializeComponent();
@@ -73,6 +76,8 @@ namespace WindowsFormsApplication1
         private void SpamButton_Click(object sender, EventArgs e)
         {
             SpamForm frm = new SpamForm();
+            frm.access_token = access_token;
+            frm.usre_id = user_id;
             frm.ShowDialog();
         }
 
