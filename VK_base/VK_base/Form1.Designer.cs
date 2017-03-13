@@ -179,7 +179,7 @@
             // Pirat_button
             // 
             this.Pirat_button.BackColor = System.Drawing.Color.SandyBrown;
-            this.Pirat_button.Font = new System.Drawing.Font("News706 BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pirat_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pirat_button.Location = new System.Drawing.Point(711, 280);
             this.Pirat_button.Name = "Pirat_button";
             this.Pirat_button.Size = new System.Drawing.Size(184, 77);
@@ -211,7 +211,7 @@
             // 
             this.Laikbutton.Location = new System.Drawing.Point(445, 215);
             this.Laikbutton.Name = "Laikbutton";
-            this.Laikbutton.Size = new System.Drawing.Size(139, 20);
+            this.Laikbutton.Size = new System.Drawing.Size(139, 30);
             this.Laikbutton.TabIndex = 15;
             this.Laikbutton.Text = "Автолайк групп";
             this.Laikbutton.UseVisualStyleBackColor = true;
