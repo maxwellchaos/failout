@@ -143,7 +143,6 @@
             // Pirat_button
             // 
             this.Pirat_button.BackColor = System.Drawing.Color.SandyBrown;
-            this.Pirat_button.Font = new System.Drawing.Font("News706 BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pirat_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pirat_button.Location = new System.Drawing.Point(711, 280);
             this.Pirat_button.Name = "Pirat_button";
