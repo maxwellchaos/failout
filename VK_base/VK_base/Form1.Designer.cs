@@ -179,7 +179,7 @@
             // Pirat_button
             // 
             this.Pirat_button.BackColor = System.Drawing.Color.SandyBrown;
-            this.Pirat_button.Font = new System.Drawing.Font("News706 BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pirat_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pirat_button.Location = new System.Drawing.Point(711, 280);
             this.Pirat_button.Name = "Pirat_button";
             this.Pirat_button.Size = new System.Drawing.Size(184, 77);
@@ -222,6 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 470);
+            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.Laikbutton);
             this.Controls.Add(this.gropssercbaton);
             this.Controls.Add(this.addFriends_button);
@@ -235,7 +236,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";

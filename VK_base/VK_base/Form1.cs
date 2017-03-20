@@ -13,8 +13,8 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        string access_token;
-        string user_id;
+        public string access_token;
+        public string user_id;
         public Form1()
         {
             InitializeComponent();
