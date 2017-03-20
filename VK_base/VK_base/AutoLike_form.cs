@@ -85,9 +85,11 @@ namespace WindowsFormsApplication1
                             }
                             foreach (XmlNode tag3 in tag2.SelectNodes("photo_100"))
                             {
-                                //Friend_list.Text = Friend_list.Text + tag3.InnerText;
+                                pictureBox1.Load(tag3.InnerText);
                             }
-                            Friend_list.Items.Add(name);
+                            imageList1.Images.Add(pictureBox1.Image);
+                            Friend_list.Items.Add(name,imageList1.Images.Count-1);
+                            Application.DoEvents();
                         }
                     }
                 }
