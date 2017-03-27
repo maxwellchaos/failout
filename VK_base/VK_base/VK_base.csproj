@@ -84,6 +84,12 @@
     <Compile Include="SpamForm.Designer.cs">
       <DependentUpon>SpamForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Spisok freands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spisok freands.Designer.cs">
+      <DependentUpon>Spisok freands.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AvtoLaikGroup.resx">
       <DependentUpon>AvtoLaikGroup.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="SpamForm.resx">
       <DependentUpon>SpamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spisok freands.resx">
+      <DependentUpon>Spisok freands.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
