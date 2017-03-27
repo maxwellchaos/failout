@@ -44,10 +44,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.find_groups_box = new System.Windows.Forms.TextBox();
             this.find_groups_button = new System.Windows.Forms.Button();
+            this.Pirat_button = new System.Windows.Forms.Button();
             this.addFriends_button = new System.Windows.Forms.Button();
             this.gropssercbaton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.Laikbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -152,7 +152,7 @@
             // autoadd
             // 
             this.autoadd.AutoSize = true;
-            this.autoadd.Location = new System.Drawing.Point(25, 418);
+            this.autoadd.Location = new System.Drawing.Point(12, 413);
             this.autoadd.Name = "autoadd";
             this.autoadd.Size = new System.Drawing.Size(198, 17);
             this.autoadd.TabIndex = 8;
@@ -176,6 +176,17 @@
             this.find_groups_button.Text = "Найти соответствия";
             this.find_groups_button.UseVisualStyleBackColor = true;
             // 
+            // Pirat_button
+            // 
+            this.Pirat_button.BackColor = System.Drawing.Color.SandyBrown;
+            this.Pirat_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pirat_button.Location = new System.Drawing.Point(711, 280);
+            this.Pirat_button.Name = "Pirat_button";
+            this.Pirat_button.Size = new System.Drawing.Size(184, 77);
+            this.Pirat_button.TabIndex = 11;
+            this.Pirat_button.Text = "TORRENT-TREKKER";
+            this.Pirat_button.UseVisualStyleBackColor = false;
+            // 
             // addFriends_button
             // 
             this.addFriends_button.Location = new System.Drawing.Point(711, 372);
@@ -196,33 +207,25 @@
             this.gropssercbaton.UseVisualStyleBackColor = true;
             this.gropssercbaton.Click += new System.EventHandler(this.gropssercbaton_Click);
             // 
-            // button1
+            // Laikbutton
             // 
-            this.button1.Location = new System.Drawing.Point(25, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 30);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Список запросов";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // webBrowser2
-            // 
-            this.webBrowser2.Location = new System.Drawing.Point(660, 33);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser2.TabIndex = 17;
+            this.Laikbutton.Location = new System.Drawing.Point(445, 215);
+            this.Laikbutton.Name = "Laikbutton";
+            this.Laikbutton.Size = new System.Drawing.Size(139, 30);
+            this.Laikbutton.TabIndex = 15;
+            this.Laikbutton.Text = "Автолайк групп";
+            this.Laikbutton.UseVisualStyleBackColor = true;
+            this.Laikbutton.Click += new System.EventHandler(this.Laikbutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 470);
-            this.Controls.Add(this.webBrowser2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Laikbutton);
             this.Controls.Add(this.gropssercbaton);
             this.Controls.Add(this.addFriends_button);
+            this.Controls.Add(this.Pirat_button);
             this.Controls.Add(this.find_groups_button);
             this.Controls.Add(this.find_groups_box);
             this.Controls.Add(this.autoadd);
@@ -263,10 +266,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox find_groups_box;
         private System.Windows.Forms.Button find_groups_button;
+        private System.Windows.Forms.Button Pirat_button;
         private System.Windows.Forms.Button addFriends_button;
         private System.Windows.Forms.Button gropssercbaton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.Button Laikbutton;
     }
 }
 

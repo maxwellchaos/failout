@@ -13,8 +13,6 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        public string access_token;
-        public string user_id;
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +23,8 @@ namespace WindowsFormsApplication1
             string url = e.Url.ToString();
             if (url.Contains("access_token"))
             {
-                
+                string access_token;
+                string user_id;
                 int index = url.IndexOf("access_token=");
                 int index2 = url.IndexOf("&expires_in");
                 access_token = url.Substring(index + 13, index2 - index - 13);
@@ -91,8 +90,7 @@ namespace WindowsFormsApplication1
 
         private void addFriends_Click(object sender, EventArgs e)
         {
-            
-            webBrowser2.Navigate("https://api.vk.com/method/friends.getRequests.xml?&access_token=" + access_token + "&v=5.62");
+
         }
 
         private void gropssercbaton_Click(object sender, EventArgs e)
@@ -105,15 +103,6 @@ namespace WindowsFormsApplication1
         {
             AutoLike_form serc = new AutoLike_form();
             serc.ShowDialog();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-            Spisok_freands ttg = new Spisok_freands();
-            ttg.access_token = access_token;
-            ttg.ShowDialog();
-            
         }
     }
 }
