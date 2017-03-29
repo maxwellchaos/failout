@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Spisok_freands : Form
     {
+        string id;
         public string access_token;
         public Spisok_freands()
         {
@@ -29,15 +30,18 @@ namespace WindowsFormsApplication1
                 {
                     foreach (XmlNode level3 in level2.SelectNodes("user_id"))
                     {
-                        string id = level3.InnerText;
+                         id = level3.InnerText;
                         
                         listView1.Items.Add(id);
+                        XmlDocument doc1 = new XmlDocument();
+                        string ttg1 = "https://api.vk.com/method/friends.add.xml?&access_token=" + access_token + "&user_id=" + id + "&v=5.62";
+                        doc1.Load(ttg1);
                     }
                 }
 
                 
             }
-         
+           
         }
     }
 }

@@ -115,5 +115,17 @@ namespace WindowsFormsApplication1
             ttg.ShowDialog();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Добыываем путь, где искать кукиз 
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies); //Собитраем все файлы кукиз 
+            string[] cookies = System.IO.Directory.GetFiles(path); //Удаляем все найденные файлы кукиз 
+            foreach (string cookie in cookies) 
+            {
+                try { System.IO.File.Delete(cookie); } catch (Exception e1) { } 
+            } 
+            Application.Restart();
+        }
     }
 }

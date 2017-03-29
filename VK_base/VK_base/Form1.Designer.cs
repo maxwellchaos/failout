@@ -48,6 +48,7 @@
             this.gropssercbaton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -214,11 +215,22 @@
             this.webBrowser2.Size = new System.Drawing.Size(250, 250);
             this.webBrowser2.TabIndex = 17;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(49, 117);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 30);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Выйти";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 470);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.webBrowser2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gropssercbaton);
@@ -267,6 +279,7 @@
         private System.Windows.Forms.Button gropssercbaton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.Button button2;
     }
 }
 
