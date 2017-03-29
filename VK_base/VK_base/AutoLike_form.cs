@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Collections.ObjectModel;
 using System.Xml;
 
 namespace WindowsFormsApplication1
 {
     public partial class AutoLike_form : Form
     {
+        Collection<string> owner_id = new Collection<string>();
+        Collection<string> post_id = new Collection<string>();
         public string user_id;
         public string access_token;
         public AutoLike_form()
@@ -75,6 +78,7 @@ namespace WindowsFormsApplication1
                         foreach (XmlNode tag2 in tag1.SelectNodes("user"))
                         {
                             string name = "";
+                            string id = "";
                             foreach (XmlNode tag3 in tag2.SelectNodes("first_name"))
                             {
                                 name = tag3.InnerText;
@@ -83,18 +87,43 @@ namespace WindowsFormsApplication1
                             {
                                 name = name + " " + tag3.InnerText;
                             }
+                            foreach (XmlNode tag3 in tag2.SelectNodes("id"))
+                            {
+                                id = tag3.InnerText;
+                                owner_id.Add(id);
+                            }
                             foreach (XmlNode tag3 in tag2.SelectNodes("photo_100"))
                             {
                                 pictureBox1.Load(tag3.InnerText);
                             }
                             imageList1.Images.Add(pictureBox1.Image);
-                            Friend_list.Items.Add(name,imageList1.Images.Count-1);
+                            Friend_list.Items.Add(id,name,imageList1.Images.Count-1);
                             Application.DoEvents();
                         }
                     }
                 }
                 webBrowser1.Visible = false;
 
+                string request3 = "https://api.vk.com/method/wall.get.xml?owner_id=413685943&access_token="+ access_token +"&v=5.62";
+                Doc.Load(request3);
+                if (Doc.InnerXml.Contains("error"))
+                {
+                    MessageBox.Show("Ошибка получения данных о пользователе");
+                }
+                foreach (XmlNode tag in Doc.SelectNodes("response"))
+                {
+                    foreach (XmlNode tag1 in tag.SelectNodes("items"))
+                    {
+                        foreach (XmlNode tag2 in tag1.SelectNodes("post"))
+                        {
+                            foreach (XmlNode tag3 in tag2.SelectNodes("id"))
+                            {
+                                string id = tag3.InnerText;
+                                post_id.Add(id);
+                            }
+                        }
+                    }
+                }
             }
 
 
