@@ -38,24 +38,7 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("Ошибка получения данных о пользователе!");
                 }
-                foreach (XmlNode level1 in doc.SelectNodes("response"))
-                {
-                    foreach (XmlNode level2 in level1.SelectNodes("user"))
-                    {
-                        foreach (XmlNode level3 in level2.SelectNodes("first_name"))
-                        {
-                            label1.Text = level3.InnerText;
-                        }
-                        foreach (XmlNode level3 in level2.SelectNodes("last_name"))
-                        {
-                            label2.Text = level3.InnerText;
-                        }
-                        foreach (XmlNode level3 in level2.SelectNodes("photo_100"))
-                        {
-                            pictureBox1.ImageLocation = level3.InnerText;
-                        }
-                    }
-                }
+                
                 webBrowser1.Visible = false;
 
             }

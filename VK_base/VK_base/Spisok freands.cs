@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
                             }
                         }
 
-                                listView1.Items.Add(id);
+                               
                             XmlDocument doc1 = new XmlDocument();
                             string ttg1 = "https://api.vk.com/method/friends.add.xml?&access_token=" + access_token + "&user_id=" + id + "&v=5.62";
                             doc1.Load(ttg1);
