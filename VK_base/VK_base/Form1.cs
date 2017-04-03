@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1
         private void addFriends_Click(object sender, EventArgs e)
         {
             
-            webBrowser2.Navigate("https://api.vk.com/method/friends.getRequests.xml?&access_token=" + access_token + "&v=5.62");
+           
         }
 
         private void gropssercbaton_Click(object sender, EventArgs e)
