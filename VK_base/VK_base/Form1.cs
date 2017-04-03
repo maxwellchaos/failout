@@ -112,17 +112,8 @@ namespace WindowsFormsApplication1
             
             Spisok_freands ttg = new Spisok_freands();
             ttg.access_token = access_token;
-            
-
             ttg.ShowDialog();
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
             
-            Application.Restart();
-            access_token = "";
         }
 
         private void button2_Click(object sender, EventArgs e)

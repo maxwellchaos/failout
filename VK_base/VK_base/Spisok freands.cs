@@ -12,11 +12,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Spisok_freands : Form
     {
-<<<<<<< HEAD
-        public string id;
-=======
         string id;
->>>>>>> origin/master
         public string access_token;
         public Spisok_freands()
         {
@@ -45,13 +41,7 @@ namespace WindowsFormsApplication1
 
                 
             }
-<<<<<<< HEAD
-
-            string add = "https://api.vk.com/method/friends.add.xml?&access_token=" + access_token + "&user_id="+ id + "&v=5.62";
-         
-=======
            
->>>>>>> origin/master
         }
     }
 }
