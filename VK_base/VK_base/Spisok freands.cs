@@ -12,7 +12,11 @@ namespace WindowsFormsApplication1
 {
     public partial class Spisok_freands : Form
     {
+<<<<<<< HEAD
         public string id;
+=======
+        string id;
+>>>>>>> origin/master
         public string access_token;
         public Spisok_freands()
         {
@@ -33,14 +37,21 @@ namespace WindowsFormsApplication1
                          id = level3.InnerText;
                         
                         listView1.Items.Add(id);
+                        XmlDocument doc1 = new XmlDocument();
+                        string ttg1 = "https://api.vk.com/method/friends.add.xml?&access_token=" + access_token + "&user_id=" + id + "&v=5.62";
+                        doc1.Load(ttg1);
                     }
                 }
 
                 
             }
+<<<<<<< HEAD
 
             string add = "https://api.vk.com/method/friends.add.xml?&access_token=" + access_token + "&user_id="+ id + "&v=5.62";
          
+=======
+           
+>>>>>>> origin/master
         }
     }
 }
