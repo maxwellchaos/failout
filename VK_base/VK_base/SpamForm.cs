@@ -11,6 +11,9 @@ namespace WindowsFormsApplication1
 {
     public partial class SpamForm : Form
     {
+        public string access_token;
+        public string user_id;
+
         public SpamForm()
         {
             InitializeComponent();
