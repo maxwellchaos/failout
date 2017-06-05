@@ -30,7 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.label1 = new System.Windows.Forms.Label();
+
+  this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();          
+  this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SpamButton = new System.Windows.Forms.Button();
@@ -45,6 +48,7 @@
             this.gropssercbaton = new System.Windows.Forms.Button();
             this.Laikbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+
             this.SuspendLayout();
             // 
             // webBrowser1
@@ -53,12 +57,23 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+
             this.webBrowser1.Size = new System.Drawing.Size(945, 470);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
-            // label1
+            // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Font = new System.Drawing.Font("Niagara Solid", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(340, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 62);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Добавить всех в друзья";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 30);
             this.label1.Name = "label1";
@@ -180,38 +195,28 @@
             this.Laikbutton.Text = "Автолайк групп";
             this.Laikbutton.UseVisualStyleBackColor = true;
             this.Laikbutton.Click += new System.EventHandler(this.Laikbutton_Click);
+
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 470);
-            this.Controls.Add(this.Laikbutton);
-            this.Controls.Add(this.gropssercbaton);
-            this.Controls.Add(this.addFriends_button);
-            this.Controls.Add(this.Pirat_button);
-            this.Controls.Add(this.find_groups_button);
-            this.Controls.Add(this.find_groups_box);
-            this.Controls.Add(this.autoadd);
-            this.Controls.Add(this.AutoLike_button);
-            this.Controls.Add(this.DogPatulButton);
-            this.Controls.Add(this.SpamButton);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(847, 477);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.WebBrowser webBrowser1;
+
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -219,13 +224,9 @@
         private System.Windows.Forms.Button DogPatulButton;
         private System.Windows.Forms.Button AutoLike_button;
         private System.Windows.Forms.CheckBox autoadd;
+
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox find_groups_box;
-        private System.Windows.Forms.Button find_groups_button;
-        private System.Windows.Forms.Button Pirat_button;
-        private System.Windows.Forms.Button addFriends_button;
-        private System.Windows.Forms.Button gropssercbaton;
-        private System.Windows.Forms.Button Laikbutton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
