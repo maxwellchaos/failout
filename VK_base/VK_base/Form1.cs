@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5114880&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.37");
+            webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5114880&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends+wall&response_type=token&v=5.37");
         }
 
         private void button1_Click(object sender, EventArgs e)
