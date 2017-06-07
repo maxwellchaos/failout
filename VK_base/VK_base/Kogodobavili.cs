@@ -9,19 +9,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class SpamForm : Form
+    public partial class Kogodobavili : Form
     {
-        public string access_token;
-        public string user_id;
-
-        public SpamForm()
+        public Kogodobavili()
         {
             InitializeComponent();
-        }
-
-        private void SpamForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

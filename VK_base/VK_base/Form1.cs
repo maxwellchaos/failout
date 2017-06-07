@@ -38,24 +38,7 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("Ошибка получения данных о пользователе!");
                 }
-                foreach (XmlNode level1 in doc.SelectNodes("response"))
-                {
-                    foreach (XmlNode level2 in level1.SelectNodes("user"))
-                    {
-                        foreach (XmlNode level3 in level2.SelectNodes("first_name"))
-                        {
-                            label1.Text = level3.InnerText;
-                        }
-                        foreach (XmlNode level3 in level2.SelectNodes("last_name"))
-                        {
-                            label2.Text = level3.InnerText;
-                        }
-                        foreach (XmlNode level3 in level2.SelectNodes("photo_100"))
-                        {
-                            pictureBox1.ImageLocation = level3.InnerText;
-                        }
-                    }
-                }
+                
                 webBrowser1.Visible = false;
 
             }
@@ -94,7 +77,8 @@ namespace WindowsFormsApplication1
 
         private void addFriends_Click(object sender, EventArgs e)
         {
-
+            
+           
         }
 
         private void gropssercbaton_Click(object sender, EventArgs e)
@@ -107,6 +91,27 @@ namespace WindowsFormsApplication1
         {
             AutoLike_form serc = new AutoLike_form();
             serc.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            Spisok_freands ttg = new Spisok_freands();
+            ttg.access_token = access_token;
+            ttg.ShowDialog();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Добыываем путь, где искать кукиз 
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies); //Собитраем все файлы кукиз 
+            string[] cookies = System.IO.Directory.GetFiles(path); //Удаляем все найденные файлы кукиз 
+            foreach (string cookie in cookies) 
+            {
+                try { System.IO.File.Delete(cookie); } catch (Exception e1) { } 
+            } 
+            Application.Restart();
         }
     }
 }
