@@ -201,9 +201,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 477);
+
+            this.ClientSize = new System.Drawing.Size(945, 470);
+            this.Controls.Add(this.Laikbutton);
+            this.Controls.Add(this.gropssercbaton);
+            this.Controls.Add(this.addFriends_button);
+            this.Controls.Add(this.Pirat_button);
+            this.Controls.Add(this.find_groups_button);
+            this.Controls.Add(this.find_groups_box);
+            this.Controls.Add(this.autoadd);
+            this.Controls.Add(this.AutoLike_button);
+            this.Controls.Add(this.DogPatulButton);
+            this.Controls.Add(this.SpamButton);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.webBrowser1);
+            this.MainMenuStrip = this.menuStrip1;
+          
             this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
+
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

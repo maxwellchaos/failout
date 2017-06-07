@@ -18,5 +18,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void SpamForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
