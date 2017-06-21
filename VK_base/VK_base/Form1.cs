@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5114880&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends&response_type=token&v=5.37");
+            webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5114880&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=4098&response_type=token&v=5.37");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,7 +73,37 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void SpamButton_Click(object sender, EventArgs e)
+       /* private void SpamButton_Click(object sender, EventArgs e)
+        {
+            SpamForm frm = new SpamForm();
+            frm.access_token = access_token;
+            frm.usre_id = user_id;
+            frm.ShowDialog();
+        }*/
+
+        
+
+        
+
+        private void addFriends_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*private void gropssercbaton_Click(object sender, EventArgs e)
+        {
+            Gropsserc serc = new Gropsserc();
+            serc.ShowDialog();
+        }*/
+
+        
+
+        private void Pirat_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void рассылкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SpamForm frm = new SpamForm();
             frm.access_token = access_token;
@@ -81,33 +111,33 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
-        private void DogPatulButton_Click(object sender, EventArgs e)
+        private void поискУдаленныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DogPatrulForm frm = new DogPatrulForm();
             frm.ShowDialog();
         }
 
-        private void AutoLike_button_Click(object sender, EventArgs e)
-        {
-            AutoLike_form frm = new AutoLike_form();
-            frm.ShowDialog();
-        }
-
-        private void addFriends_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gropssercbaton_Click(object sender, EventArgs e)
+        private void поискГруппToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Gropsserc serc = new Gropsserc();
             serc.ShowDialog();
         }
 
-        private void Laikbutton_Click(object sender, EventArgs e)
+        private void автолайкToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AutoLike_form serc = new AutoLike_form();
-            serc.ShowDialog();
+            AutoLike_form frm = new AutoLike_form();
+            frm.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Добыываем путь, где искать кукиз 
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies); //Собитраем все файлы кукиз
+            string[] cookies = System.IO.Directory.GetFiles(path); //Удаляем все найденные файлы кукиз
+            foreach (string cookie in cookies) { try { System.IO.File.Delete(cookie); } catch (Exception e1) { } } //Перезапуск приложения
+            Application.Restart();
+        }
+
+       
     }
 }
