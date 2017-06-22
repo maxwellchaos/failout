@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     public partial class SpamForm : Form
     {
         public string access_token;
+
         public string usre_id;
         public string user_id;
         public string group_id;
@@ -21,6 +22,7 @@ namespace WindowsFormsApplication1
         public string message;
         Collection<string> name;
         Collection<string> asd;
+
         public SpamForm()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace WindowsFormsApplication1
 
         private void SpamForm_Load(object sender, EventArgs e)
         {
+
             asd = new Collection<string>();
 
             webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5889617&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends+messages&response_type=token&v=5.37");
@@ -337,6 +340,7 @@ namespace WindowsFormsApplication1
         {
 
         }
+
 
     }
 }

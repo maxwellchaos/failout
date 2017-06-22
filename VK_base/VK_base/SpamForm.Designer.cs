@@ -295,9 +295,11 @@
             this.Name = "SpamForm";
             this.Text = "SpamForm";
             this.Load += new System.EventHandler(this.SpamForm_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 

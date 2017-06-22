@@ -15,7 +15,9 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         public string access_token;
-           public     string user_id;
+
+        public string user_id;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,8 +28,7 @@ namespace WindowsFormsApplication1
             string url = e.Url.ToString();
             if (url.Contains("access_token"))
             {
-                string access_token;
-                string user_id;
+                
                 int index = url.IndexOf("access_token=");
                 int index2 = url.IndexOf("&expires_in");
                 access_token = url.Substring(index + 13, index2 - index - 13);
@@ -40,24 +41,7 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("Ошибка получения данных о пользователе!");
                 }
-                foreach (XmlNode level1 in doc.SelectNodes("response"))
-                {
-                    foreach (XmlNode level2 in level1.SelectNodes("user"))
-                    {
-                        foreach (XmlNode level3 in level2.SelectNodes("first_name"))
-                        {
-                            label1.Text = level3.InnerText;
-                        }
-                        foreach (XmlNode level3 in level2.SelectNodes("last_name"))
-                        {
-                            label2.Text = level3.InnerText;
-                        }
-                        foreach (XmlNode level3 in level2.SelectNodes("photo_100"))
-                        {
-                            pictureBox1.ImageLocation = level3.InnerText;
-                        }
-                    }
-                }
+                
                 webBrowser1.Visible = false;
 
             }
@@ -65,7 +49,8 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5114880&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=4098&response_type=token&v=5.37");
+
+            webBrowser1.Navigate("https://oauth.vk.com/authorize?client_id=5114880&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends+wall&response_type=token&v=5.37");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -103,18 +88,29 @@ namespace WindowsFormsApplication1
 
         }
 
+
         private void рассылкаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SpamForm frm = new SpamForm();
             frm.access_token = access_token;
             frm.usre_id = user_id;
+}
+
+        private void AutoLike_button_Click(object sender, EventArgs e)
+        {
+            AutoLike_form frm = new AutoLike_form();
+            frm.access_token = access_token;
+            frm.user_id = user_id;
+
             frm.ShowDialog();
         }
 
         private void поискУдаленныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             DogPatrulForm frm = new DogPatrulForm();
             frm.ShowDialog();
+
         }
 
         private void поискГруппToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +134,27 @@ namespace WindowsFormsApplication1
             Application.Restart();
         }
 
-       
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            Spisok_freands ttg = new Spisok_freands();
+            ttg.access_token = access_token;
+            ttg.ShowDialog();
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Добыываем путь, где искать кукиз 
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies); //Собитраем все файлы кукиз 
+            string[] cookies = System.IO.Directory.GetFiles(path); //Удаляем все найденные файлы кукиз 
+            foreach (string cookie in cookies) 
+            {
+                try { System.IO.File.Delete(cookie); } catch (Exception e1) { } 
+            } 
+            Application.Restart();
+        }
+
     }
 }
