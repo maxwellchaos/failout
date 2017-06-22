@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
             frm.ShowDialog();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void UNLOG_Click_1(object sender, EventArgs e)
         {
             //Добыываем путь, где искать кукиз 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies); //Собитраем все файлы кукиз
@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void AddFriends_Click_1(object sender, EventArgs e)
         {
             
             Spisok_freands ttg = new Spisok_freands();
@@ -144,17 +144,7 @@ namespace WindowsFormsApplication1
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Добыываем путь, где искать кукиз 
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Cookies); //Собитраем все файлы кукиз 
-            string[] cookies = System.IO.Directory.GetFiles(path); //Удаляем все найденные файлы кукиз 
-            foreach (string cookie in cookies) 
-            {
-                try { System.IO.File.Delete(cookie); } catch (Exception e1) { } 
-            } 
-            Application.Restart();
-        }
+
 
     }
 }
